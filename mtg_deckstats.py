@@ -76,19 +76,19 @@ if __name__ == "__main__":
         data_dict[str_id] = test.gen_histogram(samples=1e3, draw_num=i, message=str_id, hist_percents=True)
     
     #Need to make all lists the same size
-    for key in data_dict.items():
+    #for key in data_dict.items():
         
     
     
-    df = pd.DataFrame(data_dict)
+    #df = pd.DataFrame(data_dict)
     
     
     
-    #with open('output2.csv', 'w+') as output:
-    #    writer = csv.writer(output)
-    #    for key, value_list in data_dict.items():
-    #        values = ",".join(str(x) for x in value_list)
-    #        writer.writerow([key, values])
+    with open('output2.csv', 'w+') as output:
+        writer = csv.writer(output)
+        for key, value_list in data_dict.items():
+            values = ",".join(str(x) for x in value_list)
+            writer.writerow([key, values])
     
     
     
